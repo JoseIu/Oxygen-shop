@@ -1,5 +1,8 @@
 @use './reset//reset';
 @use './pages/header';
+@use './pages/home';
+@use './pages/info';
+
 .wrapper {
   max-width: 1626px;
   margin-inline: auto;
