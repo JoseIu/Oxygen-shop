@@ -1,0 +1,7 @@
+@use './reset//reset';
+@use './pages/header';
+.wrapper {
+  max-width: 1626px;
+  margin-inline: auto;
+  // background-color: aqua;
+}
