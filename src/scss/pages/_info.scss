@@ -1,0 +1,59 @@
+.info {
+  padding: 5em 1em 1em 1em;
+  background-color: rgba(247, 247, 247, 1);
+
+  &__macbook {
+    position: relative;
+    margin-inline: auto;
+
+    max-width: 70em;
+    padding: 6em 1em 1em 1em;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0.0625rem solid rgba(232, 233, 237, 1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      padding: 6em 3em 1em 3em;
+    }
+    &-content {
+      order: 2;
+      @media screen and (min-width: 600px) {
+        order: 1;
+      }
+    }
+    &-titlet {
+      font-size: clamp(1.875rem, 2vw, 2.25rem);
+      margin-bottom: 2em;
+    }
+    &-description {
+      font-size: clamp(0.875rem, 1vw, 1rem);
+    }
+    &-img {
+      z-index: 1;
+      position: relative;
+      order: 1;
+      max-width: 24.125rem;
+      min-width: 12rem;
+      margin-inline: auto;
+      @media screen and (min-width: 600px) {
+        order: 2;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: -2.5em;
+        right: -1em;
+        width: 10em;
+        height: 10em;
+        border-radius: 2em;
+        transform: rotate(50deg);
+        background-color: rgba(251, 59, 100, 1);
+        z-index: -1;
+      }
+    }
+  }
+}
