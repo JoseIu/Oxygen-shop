@@ -1,0 +1,21 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch --no-source-map ./src/scss/styles.scss ./src/css/styles.css",
+    "build": "postcss ./src/css/styles.css -o ./dist/css/styles.min.css --no-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "10.4.18",
+    "cssnano": "^6.1.0",
+    "postcss": "8.4.37",
+    "postcss-cli": "11.0.0",
+    "sass": "1.72.0"
+  }
+}
