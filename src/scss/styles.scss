@@ -4,6 +4,8 @@
 @use './pages/info';
 @use './pages/prices';
 @use './pages/contact';
+
+@use './pages/footer';
 .wrapper {
   max-width: 1626px;
   margin-inline: auto;
