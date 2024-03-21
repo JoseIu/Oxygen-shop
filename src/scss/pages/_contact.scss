@@ -1,5 +1,6 @@
 .contact {
-  padding: 1em;
+  padding: 1em 2em;
+  margin-bottom: 5em;
   @media screen and (min-width: 960px) {
     width: 60em;
   }
@@ -10,6 +11,7 @@
     gap: 2em;
   }
   &__info {
+    margin-bottom: 2em;
   }
   &__title {
     margin-bottom: 0.2em;
@@ -19,7 +21,6 @@
   }
   &__subtitle {
     margin-bottom: 1em;
-
     font-weight: 400;
   }
   &__ul {
@@ -30,9 +31,10 @@
     }
   }
   &__li {
+    margin-bottom: 1em;
     display: flex;
     align-items: center;
-    gap: 0.3em;
+    gap: 0.5em;
   }
   &__icon {
     width: 1.6875rem;
