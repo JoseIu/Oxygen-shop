@@ -230,22 +230,47 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact wrapper">
         <div class="contact__info">
           <h2 class="contact__title">Any questions?</h2>
           <h3 class="contact__subtitle">Leave your email address or call us!</h3>
           <ul class="contact__ul">
             <li class="contact__li">
-              <img class="contact__icon" src="./assets/images/email.svg" alt="phone icon" />
+              <img class="contact__icon" src="./assets/images/email.svg" alt="email icon" />
               <span class="contact__text">info@bestshop.xyz</span>
             </li>
-            <li>
+            <li class="contact__li">
               <img class="contact__icon" src="./assets/images/phone.svg" alt="phone icon" />
               <span class="contact__text">123 456 789</span>
             </li>
           </ul>
         </div>
-        <div class="contact__form"></div>
+
+        <form class="contact__form">
+          <label class="contact__form-label" for="name">
+            Name
+
+            <input class="contact__form-input" type="text" name="name" id="name" />
+          </label>
+          <label class="contact__form-label" for="email">
+            Email
+
+            <input class="contact__form-input" type="email" name="email" id="email" />
+          </label>
+
+          <div class="contact__form-checkbox">
+            <input class="contact__form-check" type="checkbox" name="conditions" id="conditions" />
+            <span class="contact__form-span"
+              >I hereby give consent for my personal data included in my application to be processed
+              for the purposes of the recruitment process under the European Parliament’s and
+              Council of the European Union Regulation on the Protection of Natural Persons as of 27
+              April 2016, with regard to the processing of personal data and on the free movement of
+              such data, and repealing Directive 95/46/EC (Data Protection Directive)</span
+            >
+          </div>
+
+          <input class="contact__form-submit" type="submit" value="Send" />
+        </form>
       </section>
     </main>
 
