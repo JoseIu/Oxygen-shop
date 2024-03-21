@@ -48,12 +48,11 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
-*::before,
-*::after {
-  display: block;
-}
+// *::before,
+// *::after {
+//   display: block;
+// }
 
-/* Evitamos problemas con las imagenes */
 img,
 picture,
 video,
@@ -68,29 +67,24 @@ figure {
   object-position: center center;
 }
 
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
   display: block;
   text-decoration: none;
   color: inherit;
   font-size: inherit;
 }
-/* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
 }
 
-/* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
 
-/* (Opcional) Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
 
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
 h2,
 h3,
@@ -112,22 +106,7 @@ em {
   text-decoration: none;
   color: inherit;
 }
-/* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
 
-/* (Opcional) Configuramos el texto que seleccionamos */
-::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
-
-/* Nivelamos problemas de tipografías y colocación de formularios */
 form,
 input,
 textarea,
@@ -144,7 +123,6 @@ label {
   appearance: none;
 }
 
-/* Reseteamos las tablas */
 table,
 tr,
 td {
@@ -152,7 +130,6 @@ td {
   border-spacing: 0;
 }
 
-/* Evitamos problemas con los SVG */
 svg {
   width: 100%;
   display: block;
@@ -165,9 +142,7 @@ body {
   // font-family: var(--tipo-principal);
   font-family: 'Raleway';
   color: var(--negro);
-  /* (Opcional) */
-  hyphens: auto;
-  /* (Opcional) */
+
   font-smooth: always;
   /* (Opcional) */
   -webkit-font-smoothing: antialiased;
