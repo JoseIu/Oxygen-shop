@@ -1,0 +1,35 @@
+.footer {
+  padding: 3em 2em;
+  background-color: rgba(247, 247, 247, 1);
+  box-shadow: 0 -0.3125rem 2.5rem rgba(0, 0, 0, 0.2);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logos {
+  }
+  &__logo {
+    width: 18.75rem;
+  }
+  &__copy {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: rgba(165, 165, 165, 1);
+  }
+  &__socials {
+  }
+  &__item {
+    margin-left: 1em;
+    display: inline;
+  }
+  &__link {
+    display: inline;
+  }
+  &__icon {
+    display: inline;
+
+    width: 1.5rem;
+  }
+}
