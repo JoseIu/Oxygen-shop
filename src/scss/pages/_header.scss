@@ -12,12 +12,11 @@
     align-items: center;
   }
   &__logo {
-    z-index: 1;
+    z-index: 3;
   }
   &__img {
     width: 12.875rem;
     max-width: 13.4375rem;
-    z-index: 1;
   }
   &__toggle {
     cursor: pointer;
@@ -30,6 +29,7 @@
 }
 
 .nav {
+  z-index: 2;
   @media screen and (max-width: 800px) {
     position: fixed;
     top: -100%;

@@ -2,12 +2,6 @@
   padding: 1em;
   &__content {
     padding: 5em 1em 0 1em;
-    height: 90vh;
-    // background-image: url('../../../dist/assets/images/background.svg');
-    // background-position: bottom;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
   }
   &__title {
     font-size: clamp(2.1875rem, 5vw, 3.0625rem);

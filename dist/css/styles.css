@@ -156,12 +156,11 @@ body {
   align-items: center;
 }
 .header__logo {
-  z-index: 1;
+  z-index: 3;
 }
 .header__img {
   width: 12.875rem;
   max-width: 13.4375rem;
-  z-index: 1;
 }
 .header__toggle {
   cursor: pointer;
@@ -172,6 +171,9 @@ body {
   }
 }
 
+.nav {
+  z-index: 2;
+}
 @media screen and (max-width: 800px) {
   .nav {
     position: fixed;
@@ -244,7 +246,6 @@ body {
 }
 .home__content {
   padding: 5em 1em 0 1em;
-  height: 90vh;
 }
 .home__title {
   font-size: clamp(2.1875rem, 5vw, 3.0625rem);
@@ -652,13 +653,29 @@ body {
 .contact__form-checkbox {
   margin-bottom: 1em;
 }
-.contact__form-check {
-  display: inline-block;
+.contact__form-lab {
+  position: relative;
   width: 1em;
   height: 1em;
   border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contact__form-span {
+.contact__form-check {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.contact__form-check-icon {
+  width: 0.6em;
+  user-select: none;
+}
+.contact__form-check:not(:checked) + .contact__form-check-icon {
+  display: none;
+}
+.contact__form-text {
+  display: inline;
   font-size: 0.75rem;
   font-weight: 400;
   color: rgb(112, 112, 112);
@@ -667,12 +684,13 @@ body {
   width: 14.125rem;
   padding: 1em;
   margin-left: auto;
-  border-radius: 2.1875rem;
   font-size: 0.8125rem;
   font-weight: 700;
   color: white;
+  border-radius: 2.1875rem;
   background-color: rgb(8, 166, 228);
   box-shadow: 0.3125rem 0.625rem 0.875rem rgb(8, 166, 228);
+  cursor: pointer;
 }
 
 .footer {
@@ -712,7 +730,7 @@ body {
 
 .progress {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 0%;
   height: 0.3125rem;
   background-color: rgb(8, 166, 228);
