@@ -1,12 +1,23 @@
 'use strict';
+
+import validateInput from './helper/validateInput.js';
+
 const progressBar = document.querySelector('.progress');
+const buttonToTop = document.querySelector('.top');
+
 const navMenu = document.querySelector('.nav');
 const navToggle = document.querySelector('.header__toggle');
 const navClose = document.querySelector('.nav__close');
-
 const navLink = document.querySelectorAll('.nav__link ');
 
-const buttonToTop = document.querySelector('.top');
+const myForm = document.querySelector('.contact__form');
+const myFormInputs = myForm.querySelectorAll('.form__input');
+
+const getInputValues = () => {
+  myFormInputs.forEach((input) => {
+    input.addEventListener('blur', validateInput);
+  });
+};
 
 const addLinkFocus = (nav) => {
   nav.addEventListener('click', () => {
@@ -60,4 +71,5 @@ window.addEventListener('load', () => {
 
     buttonToTop.classList.add('top--show');
   });
+  getInputValues();
 });
