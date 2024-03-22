@@ -737,3 +737,12 @@ body {
 .top--show {
   display: initial;
 }
+
+.message {
+  font-size: 0.7rem;
+  color: red;
+}
+
+.input--error {
+  border-bottom: 1px solid red;
+}
