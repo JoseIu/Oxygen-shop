@@ -363,12 +363,12 @@
           </ul>
         </div>
 
-        <form class="contact__form">
+        <form class="contact__form" id="form">
           <label class="contact__form-label" for="name">
             Name
 
             <input
-              class="contact__form-input"
+              class="contact__form-input form__input"
               type="text"
               name="name"
               id="name"
@@ -379,7 +379,7 @@
             Email
 
             <input
-              class="contact__form-input"
+              class="contact__form-input form__input"
               type="email"
               aria-label="email"
               name="email"
@@ -389,7 +389,7 @@
 
           <div class="contact__form-checkbox">
             <input
-              class="contact__form-check"
+              class="contact__form-check form__input"
               type="checkbox"
               name="conditions"
               id="conditions"
@@ -453,6 +453,6 @@
         /></svg
     ></a>
 
-    <script src="./index.js" defer></script>
+    <script type="module" defer src="./index.js"></script>
   </body>
 </html>
