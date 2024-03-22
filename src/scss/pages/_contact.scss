@@ -59,17 +59,35 @@
       outline: none;
       border-bottom: 0.0625rem solid rgba(149, 152, 154, 1);
     }
+
     &-checkbox {
       margin-bottom: 1em;
     }
-
-    &-check {
-      display: inline-block;
+    &-lab {
+      position: relative;
       width: 1em;
       height: 1em;
+
       border: 1px solid #222;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    &-span {
+    &-check {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+    }
+    &-check-icon {
+      width: 0.6em;
+      user-select: none;
+    }
+    &-check:not(:checked) + &-check-icon {
+      display: none;
+    }
+    &-text {
+      display: inline;
       font-size: 0.75rem;
       font-weight: 400;
       color: rgba(112, 112, 112, 1);
@@ -78,13 +96,14 @@
       width: 14.125rem;
       padding: 1em;
       margin-left: auto;
-      border-radius: 2.1875rem;
       font-size: 0.8125rem;
       font-weight: 700;
-
       color: white;
+      border-radius: 2.1875rem;
+
       background-color: rgba(8, 166, 228, 1);
       box-shadow: 0.3125rem 0.625rem 0.875rem rgba(8, 166, 228, 1);
+      cursor: pointer;
     }
   }
 }
