@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Oxygen shop, Oxygen loading pagem Oxygen training" />
-    <!-- <link rel="stylesheet" href="./css/styles.min.css" /> -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 
     <title>Oxygen Shop</title>
   </head>
@@ -58,23 +58,26 @@
           <h2 class="home__title">Sell More!</h2>
           <p class="home__description">Open shop on our platform and increase your sales</p>
           <button class="home__btn" aria-label="button open your shop">Open your shop</button>
-          <picture class="home__img">
-            <source
-              width="343"
-              height="593"
-              srcset="./assets/images/background.webp"
-              media="(min-width: 700px)"
-            />
-
-            <img
-              loading="lazy"
-              width="779"
-              height="267"
-              src="./assets/images/background-mobile.jpg"
-              alt="background image"
-            />
-          </picture>
         </div>
+        <picture>
+          <source
+            class="home__img"
+            loading="lazy"
+            width="343"
+            height="593"
+            srcset="./assets/images/background.webp"
+            media="(min-width: 700px)"
+          />
+
+          <img
+            class="home__img"
+            loading="lazy"
+            width="779"
+            height="267"
+            src="./assets/images/background-mobile.jpg"
+            alt="background image"
+          />
+        </picture>
 
         <div class="home__popular popular">
           <h3 class="popular__title">The most popular sales platform in countryh</h3>
