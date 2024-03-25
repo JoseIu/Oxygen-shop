@@ -1,11 +1,14 @@
 .carrousel {
-  //   background-color: rebeccapurple;
   position: relative;
+  max-width: 65em;
   width: 90%;
   overflow: hidden;
+  margin-inline: auto;
+  margin-bottom: 9em;
   &__container {
     width: 300%;
-    // background-color: orange;
+    margin-inline: auto;
+
     transition: all 0.5s ease;
     transform: translateX(0%);
 
@@ -15,19 +18,42 @@
   }
   &__item {
     width: calc(100% / 3);
-    // background-color: lime;
+    scroll-snap-align: center;
   }
   &__image {
-    // background-color: red;
     border-radius: 0.5em;
 
     aspect-ratio: 16/9;
   }
-  &__points {
-    // background-color: bisque;
+
+  &__btns {
+    padding: 0 0.5em;
     position: absolute;
-    bottom: 1em;
     width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &__points {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    bottom: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,5 +65,9 @@
     border-radius: 50%;
     background-color: #000000bb;
     cursor: pointer;
+
+    &--active {
+      background-color: #ebebeb;
+    }
   }
 }
