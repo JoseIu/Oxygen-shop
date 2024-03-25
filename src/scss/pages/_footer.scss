@@ -1,5 +1,5 @@
 .footer {
-  padding: 3em 2em;
+  padding: 2em 1em;
   background-color: rgba(247, 247, 247, 1);
   box-shadow: 0 -0.3125rem 2.5rem rgba(0, 0, 0, 0.2);
 
@@ -11,7 +11,7 @@
   &__logos {
   }
   &__logo {
-    width: 18.75rem;
+    min-width: 10.5rem;
   }
   &__copy {
     font-size: 0.6875rem;
@@ -19,6 +19,7 @@
     color: rgba(165, 165, 165, 1);
   }
   &__socials {
+    min-width: 6em;
   }
   &__item {
     margin-left: 1em;
