@@ -1,5 +1,5 @@
 .home {
-  padding: 1em;
+  // padding: 1em;
   &__content {
     padding: 5em 1em 0 1em;
   }
@@ -20,12 +20,17 @@
   }
   &__btn {
     color: #fff;
-    padding: 1em;
-    border-radius: 3em;
     width: 15em;
-    background-color: rgba(8, 166, 228, 1);
-
+    padding: 1em;
     margin-inline: auto;
+    margin-bottom: 3em;
+    border-radius: 3em;
+    background-color: rgba(8, 166, 228, 1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__img {
     mask-image: linear-gradient(rgba(255, 255, 255, 1) 80%, transparent);
