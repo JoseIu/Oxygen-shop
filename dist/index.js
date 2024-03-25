@@ -14,6 +14,22 @@ const navLink = document.querySelectorAll('.nav__link ');
 const myForm = document.querySelector('.contact__form');
 const myFormInputs = myForm.querySelectorAll('.form__input');
 
+const container = document.querySelector('.carrousel__container');
+const points = document.querySelectorAll('.carrousel__point');
+
+console.log(points);
+
+const carrusel = () => {
+  points.forEach((point, i) => {
+    point.addEventListener('click', () => {
+      let position = i;
+      let percent = position * -(100 / 3);
+
+      container.style.transform = `translateX(${percent}%)`;
+    });
+  });
+};
+
 const formData = {
   name: '',
   email: '',
@@ -93,4 +109,5 @@ window.addEventListener('load', () => {
     buttonToTop.classList.add('top--show');
   });
   addEvents();
+  carrusel();
 });

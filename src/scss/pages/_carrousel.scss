@@ -1,0 +1,43 @@
+.carrousel {
+  //   background-color: rebeccapurple;
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  &__container {
+    width: 300%;
+    // background-color: orange;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__item {
+    width: calc(100% / 3);
+    // background-color: lime;
+  }
+  &__image {
+    // background-color: red;
+    border-radius: 0.5em;
+
+    aspect-ratio: 16/9;
+  }
+  &__points {
+    // background-color: bisque;
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  &__point {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: #000000bb;
+    cursor: pointer;
+  }
+}
