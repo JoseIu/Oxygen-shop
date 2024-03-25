@@ -1,6 +1,9 @@
+import removeErrorMessage from './removeErrorMessage.js';
+
 const showError = (error, reference) => {
-  const existMessageError = reference.parentElement.querySelector('.message');
-  if (existMessageError) existMessageError.remove();
+  removeErrorMessage(reference);
+  // const existMessageError = reference.parentElement.querySelector('.message');
+  // if (existMessageError) existMessageError.remove();
 
   const errorMessage = document.createElement('SPAN');
   errorMessage.textContent = error;
