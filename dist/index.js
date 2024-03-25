@@ -1,5 +1,6 @@
 'use strict';
 
+import sedForm from './helper/sendForm.js';
 import validateInput from './helper/validateInput.js';
 
 const progressBar = document.querySelector('.progress');
@@ -13,10 +14,30 @@ const navLink = document.querySelectorAll('.nav__link ');
 const myForm = document.querySelector('.contact__form');
 const myFormInputs = myForm.querySelectorAll('.form__input');
 
-const getInputValues = () => {
+const formData = {
+  name: '',
+  email: '',
+  conditions: undefined,
+};
+
+const addEvents = () => {
   myFormInputs.forEach((input) => {
-    input.addEventListener('blur', validateInput);
+    input.addEventListener('change', getInputValues);
   });
+};
+myForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  sedForm(formData);
+});
+const getInputValues = (e) => {
+  if (e.target.name === 'conditions') {
+    formData[e.target.name] = e.target.checked;
+  } else {
+    formData[e.target.name] = e.target.value;
+  }
+
+  validateInput(formData, e);
 };
 
 const addLinkFocus = (nav) => {
@@ -71,5 +92,5 @@ window.addEventListener('load', () => {
 
     buttonToTop.classList.add('top--show');
   });
-  getInputValues();
+  addEvents();
 });
