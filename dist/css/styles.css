@@ -241,9 +241,6 @@ body {
   left: 0;
 }
 
-.home {
-  padding: 1em;
-}
 .home__content {
   padding: 5em 1em 0 1em;
 }
@@ -263,11 +260,17 @@ body {
 }
 .home__btn {
   color: #fff;
-  padding: 1em;
-  border-radius: 3em;
   width: 15em;
-  background-color: rgb(8, 166, 228);
+  padding: 1em;
   margin-inline: auto;
+  margin-bottom: 3em;
+  border-radius: 3em;
+  background-color: rgb(8, 166, 228);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.home__btn:hover {
+  transform: scale(1.1);
 }
 .home__img {
   mask-image: linear-gradient(rgb(255, 255, 255) 80%, transparent);
@@ -592,11 +595,15 @@ body {
 
 .carrousel {
   position: relative;
+  max-width: 70em;
   width: 90%;
   overflow: hidden;
+  margin-inline: auto;
+  margin-bottom: 9em;
 }
 .carrousel__container {
   width: 300%;
+  margin-inline: auto;
   transition: all 0.5s ease;
   transform: translateX(0%);
   display: flex;
@@ -605,15 +612,38 @@ body {
 }
 .carrousel__item {
   width: 33.3333333333%;
+  scroll-snap-align: center;
 }
 .carrousel__image {
   border-radius: 0.5em;
   aspect-ratio: 16/9;
 }
+.carrousel__btns {
+  padding: 0 0.5em;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrousel__btn {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.carrousel__btn:hover {
+  transform: scale(1.5);
+}
 .carrousel__points {
   position: absolute;
-  bottom: 1em;
+  z-index: 100;
+  bottom: 0;
   width: 100%;
+  bottom: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -625,6 +655,9 @@ body {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.7333333333);
   cursor: pointer;
+}
+.carrousel__point--active {
+  background-color: #ebebeb;
 }
 
 .contact {
@@ -733,7 +766,7 @@ body {
 }
 
 .footer {
-  padding: 3em 2em;
+  padding: 2em 1em;
   background-color: rgb(247, 247, 247);
   box-shadow: 0 -0.3125rem 2.5rem rgba(0, 0, 0, 0.2);
 }
@@ -743,12 +776,15 @@ body {
   justify-content: space-between;
 }
 .footer__logo {
-  width: 18.75rem;
+  min-width: 10.5rem;
 }
 .footer__copy {
   font-size: 0.6875rem;
   font-weight: 400;
   color: rgb(165, 165, 165);
+}
+.footer__socials {
+  min-width: 6em;
 }
 .footer__item {
   margin-left: 1em;
