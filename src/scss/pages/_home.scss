@@ -1,5 +1,5 @@
 .home {
-  // padding: 1em;
+  padding-bottom: 5em;
   &__content {
     padding: 5em 1em 0 1em;
   }
@@ -33,6 +33,10 @@
     }
   }
   &__img {
+    margin-bottom: 5em;
+    @media screen and (min-width: 800px) {
+      margin-bottom: 0;
+    }
     mask-image: linear-gradient(rgba(255, 255, 255, 1) 80%, transparent);
     aspect-ratio: 16/9;
   }
