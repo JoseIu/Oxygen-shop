@@ -241,6 +241,9 @@ body {
   left: 0;
 }
 
+.home {
+  padding-bottom: 5em;
+}
 .home__content {
   padding: 5em 1em 0 1em;
 }
@@ -273,8 +276,14 @@ body {
   transform: scale(1.1);
 }
 .home__img {
+  margin-bottom: 5em;
   mask-image: linear-gradient(rgb(255, 255, 255) 80%, transparent);
   aspect-ratio: 16/9;
+}
+@media screen and (min-width: 800px) {
+  .home__img {
+    margin-bottom: 0;
+  }
 }
 
 .popular__title {
@@ -344,9 +353,18 @@ body {
   background-color: rgb(255, 255, 255);
   border: 0.0625rem solid rgb(232, 233, 237);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .info__row {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .info__row {
+    padding: 1em;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2em;
@@ -389,10 +407,14 @@ body {
     order: 2;
   }
 }
+.info__row-image {
+  object-fit: contain;
+  aspect-ratio: 16/9;
+}
 .info__row-img--mac::after {
   content: "";
   position: absolute;
-  top: -1.3em;
+  top: 1em;
   right: -0.5em;
   width: 6em;
   height: 6em;
@@ -403,6 +425,7 @@ body {
 }
 @media screen and (min-width: 500px) {
   .info__row-img--mac::after {
+    top: -1em;
     width: 10em;
     height: 10em;
   }
@@ -415,8 +438,8 @@ body {
 .info__row-img--phone::after {
   content: "";
   position: absolute;
-  top: -1em;
-  left: 2.5em;
+  top: 1em;
+  left: 1em;
   width: 10em;
   height: 10em;
   border-radius: 50%;
@@ -432,19 +455,28 @@ body {
     left: 2.2em;
   }
 }
+@media screen and (min-width: 800px) {
+  .info__row-img--phone::after {
+    width: 17em;
+    height: 17em;
+    top: 1em;
+    left: 5em;
+  }
+}
 .info__trumpet {
   margin-inline: auto;
   max-width: 70em;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .info__trumpet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    height: 23.125rem;
   }
 }
 .info__trumpet-content {
   grid-column: span 2;
-  padding: 3em;
+  padding: 4em;
   background-color: rgb(255, 255, 255);
   border: 0.0625rem solid rgb(232, 233, 237);
 }
@@ -457,7 +489,12 @@ body {
   background-color: rgb(85, 223, 180);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+.info__trumpet-image {
+  aspect-ratio: 16/9;
+}
+
 .prices {
   padding: 4em 0;
 }
