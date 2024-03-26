@@ -5,6 +5,37 @@
     font-weight: 'Raleway';
     text-align: center;
     margin-bottom: 1em;
+    font-weight: 600;
+  }
+
+  &__select {
+    position: relative;
+    max-width: 10em;
+    margin-inline: auto;
+    border-radius: 0.3em;
+    box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.29);
+    margin-bottom: 2em;
+    font-weight: 600;
+
+    &-select {
+      width: 100%;
+      padding: 0.4em 0.5em;
+      outline: none;
+    }
+    &-arrow {
+      width: 1em;
+      position: absolute;
+      top: 0.45em;
+      right: 0.3em;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    &-select:focus + &-arrow {
+      transform: rotate(180deg);
+    }
+    &-select:not(:focus) + &-arrow {
+      transform: rotate(0);
+    }
   }
   &__cards {
     max-width: 70.75rem;
