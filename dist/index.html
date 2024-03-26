@@ -65,7 +65,7 @@
             loading="lazy"
             width="343"
             height="593"
-            srcset="./assets/images/background.webp"
+            srcset="./assets/images/background_edit2.webp"
             media="(min-width: 700px)"
           />
 
@@ -74,7 +74,7 @@
             loading="lazy"
             width="779"
             height="267"
-            src="./assets/images/background-mobile.jpg"
+            src="./assets/images/background-mobile.webp"
             alt="background image"
           />
         </picture>
@@ -86,12 +86,16 @@
             <article class="card">
               <div class="card__images">
                 <img
+                  width="48"
+                  height="47.25"
                   class="card__images-ellipse"
                   loading="lazy"
                   src="./assets/images/ellipse-person.svg"
                   alt="iconn person"
                 />
                 <img
+                  width="40"
+                  height="47.27"
                   class="card__images-person"
                   loading="lazy"
                   src="./assets/images/person.svg"
@@ -104,12 +108,16 @@
             <article class="card">
               <div class="card__images">
                 <img
+                  width="48"
+                  height="47.25"
                   class="card__images-ellipse"
                   loading="lazy"
                   src="./assets/images/ellipse-eye.svg"
                   alt="icon eye"
                 />
                 <img
+                  width="40"
+                  height="22.08"
                   class="card__images-person"
                   loading="lazy"
                   src="./assets/images/eye.svg"
@@ -122,12 +130,16 @@
             <article class="card">
               <div class="card__images">
                 <img
+                  width="48"
+                  height="47.25"
                   class="card__images-ellipse"
                   loading="lazy"
                   src="./assets/images/ellipse-catalog.svg"
                   alt="icon catalog"
                 />
                 <img
+                  width="40"
+                  height="36.92"
                   class="card__images-person"
                   loading="lazy"
                   src="./assets/images/catalog.svg"
@@ -142,14 +154,26 @@
       </section>
 
       <section class="info" id="info">
+        <!-- MAC-->
         <div class="info__row">
           <div class="info__row-img info__row-img--mac">
-            <img
-              class="info__row-image"
-              loading="lazy"
-              src="./assets/images/Macbook2 1.svg"
-              alt="icon macbook"
-            />
+            <picture>
+              <source
+                width="350"
+                height="219"
+                class="info__row-image"
+                loading="lazy"
+                srcset="./assets/images/macbook.webp"
+                media="(min-width: 800px)"
+              />
+              <img
+                width="200"
+                height="200"
+                class="info__row-image"
+                src="./assets/images/macbook-mobile.webp"
+                alt="icon macbook"
+              />
+            </picture>
           </div>
           <div class="info__row-content">
             <h2 class="info__row-titlet">Be always first</h2>
@@ -160,15 +184,28 @@
           </div>
         </div>
 
-        <!-- 2-->
+        <!-- IPHONE-->
         <div class="info__row">
           <div class="info__row-img info__row-img--phone">
-            <img
-              class="info__row-image"
-              loading="lazy"
-              src="./assets/images/iPhone2 1.svg"
-              alt="icon iphone"
-            />
+            <picture>
+              <source
+                width="426"
+                height="328"
+                class="info__row-image"
+                loading="lazy"
+                srcset="./assets/images/iPhone.webp"
+                media="(min-width: 800px)"
+              />
+
+              <img
+                width="200"
+                height="250"
+                class="info__row-image"
+                loading="lazy"
+                src="./assets/images/iPhone-mobile.webp"
+                alt="icon iphone"
+              />
+            </picture>
           </div>
           <div class="info__row-content info__row-content--phone">
             <h2 class="info__row-titlet">Your shop is where you are!</h2>
@@ -179,7 +216,7 @@
           </div>
         </div>
 
-        <!-- 3-->
+        <!-- TRUMPET-->
         <div class="info__trumpet">
           <div class="info__trumpet-content">
             <h2 class="info__trumpet-titlet">Increase recognition your brand!</h2>
@@ -189,12 +226,24 @@
             </p>
           </div>
           <div class="info__trumpet-img">
-            <img
-              class="info__trumpet-image"
-              loading="lazy"
-              src="./assets/images/trumpet.svg"
-              alt="icon trumpet"
-            />
+            <picture>
+              <source
+                width="300"
+                height="300"
+                class="info__trumpet-image"
+                loading="lazy"
+                srcset="./assets/images/trumpet.webp"
+                media="(min-width: 900px)"
+              />
+              <img
+                width="300"
+                height="400"
+                class="info__trumpet-image"
+                loading="lazy"
+                src="./assets/images/trumpet-mobile.webp"
+                alt="icon trumpet"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -382,7 +431,7 @@
           </li>
         </ul>
         <div class="carrousel__btns">
-          <button class="carrousel__btn" id="prev">
+          <button class="carrousel__btn" aria-label="slider button next" id="prev">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -395,7 +444,7 @@
               />
             </svg>
           </button>
-          <button class="carrousel__btn" id="next">
+          <button class="carrousel__btn" aria-label="slider button prev" id="next">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
