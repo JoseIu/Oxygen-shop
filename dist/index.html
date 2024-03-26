@@ -250,12 +250,17 @@
 
       <section class="prices wrapper" id="prices">
         <h2 class="prices__title">Pricing</h2>
+        <select name="select" id="select">
+          <option value="eur">UER</option>
+          <option value="usd" selected>USD</option>
+          <option value="gbp">GBP</option>
+        </select>
 
         <div class="prices__cards">
           <!-- BASIC -->
           <section class="price price--basic">
             <h2 class="price__title">
-              Basic <span class="price__price price__price--basic">$0</span>
+              Basic <span class="price__price price__price--basic" id="basic">$0</span>
             </h2>
 
             <ul class="price__list">
@@ -313,7 +318,7 @@
           <!-- PROFESSIONAL -->
           <section class="price price--professional">
             <h2 class="price__title">
-              Professional <span class="price__price price__price--professional">$25</span>
+              Professional <span class="price__price price__price--professional" id="pro">$25</span>
               <span class="price__offer">Limited offer</span>
             </h2>
 
@@ -367,7 +372,7 @@
           <!-- PREMIUM -->
           <section class="price price--premium">
             <h2 class="price__title">
-              Preminum <span class="price__price price__price--premium">$60</span>
+              Preminum <span class="price__price price__price--premium" id="premium">$60</span>
               <span class="price__offer">Limited offer</span>
             </h2>
 
