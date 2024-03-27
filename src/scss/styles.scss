@@ -5,8 +5,8 @@
 @use './pages/prices';
 @use './pages/carrousel';
 @use './pages/contact';
-
 @use './pages/footer';
+@use './pages/modal';
 .wrapper {
   max-width: 1626px;
   margin-inline: auto;

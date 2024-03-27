@@ -864,6 +864,78 @@ body {
   width: 1.5rem;
 }
 
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.modal--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal__close {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  left: 8em;
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .modal__close {
+    left: 12em;
+  }
+}
+.modal__form {
+  padding: 3em 2em;
+  min-width: 20em;
+  border-radius: 0.3em;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 600px) {
+  .modal__form {
+    min-width: 30em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}
+.modal__input {
+  width: 100%;
+  padding: 0.5em;
+  border: 0.0625rem solid #222;
+  border-radius: 0.3em;
+  outline: none;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  .modal__input {
+    margin-bottom: 0;
+  }
+}
+.modal__submit {
+  background-color: cadetblue;
+  color: #fff;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1626px;
   margin-inline: auto;
