@@ -14,10 +14,10 @@ const navLink = document.querySelectorAll('.nav__link ');
 const myForm = document.querySelector('.contact__form');
 const myFormInputs = myForm.querySelectorAll('.form__input');
 
-const container = document.querySelector('.carrousel__container');
-const images = document.querySelectorAll('.carrousel__item');
+const container = document.querySelector('.slider__container');
+const images = document.querySelectorAll('.slider__item');
 
-const points = document.querySelectorAll('.carrousel__point');
+const points = document.querySelectorAll('.slider__point');
 
 const prev = document.querySelector('#prev');
 const next = document.querySelector('#next');
@@ -83,7 +83,7 @@ selectPrices.addEventListener('change', (e) => {
   convertPrince(e.target.value);
 });
 
-const carrusel = () => {
+const slider = () => {
   let position = 0;
   const totalPoints = images.length - 1;
 
@@ -96,10 +96,10 @@ const carrusel = () => {
     container.style.transform = `translateX(${percent}%)`;
 
     points.forEach((ecahPoint) => {
-      ecahPoint.classList.remove('carrousel__point--active');
+      ecahPoint.classList.remove('slider__point--active');
     });
 
-    points[position].classList.add('carrousel__point--active');
+    points[position].classList.add('slider__point--active');
   });
   prev.addEventListener('click', () => {
     if (position === 0) return;
@@ -110,10 +110,10 @@ const carrusel = () => {
     container.style.transform = `translateX(${percent}%)`;
 
     points.forEach((ecahPoint) => {
-      ecahPoint.classList.remove('carrousel__point--active');
+      ecahPoint.classList.remove('slider__point--active');
     });
 
-    points[position].classList.add('carrousel__point--active');
+    points[position].classList.add('slider__point--active');
   });
   points.forEach((point, i) => {
     point.addEventListener('click', () => {
@@ -122,10 +122,10 @@ const carrusel = () => {
       container.style.transform = `translateX(${percentt}%)`;
 
       points.forEach((ecahPoint) => {
-        ecahPoint.classList.remove('carrousel__point--active');
+        ecahPoint.classList.remove('slider__point--active');
       });
 
-      point.classList.add('carrousel__point--active');
+      point.classList.add('slider__point--active');
     });
   });
 };
@@ -236,5 +236,5 @@ window.addEventListener('load', () => {
     buttonToTop.classList.add('top--show');
   });
   addEvents();
-  carrusel();
+  slider();
 });

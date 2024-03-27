@@ -659,7 +659,7 @@ body {
   background-color: rgb(85, 223, 180);
 }
 
-.carrousel {
+.slider {
   position: relative;
   max-width: 70em;
   width: 90%;
@@ -667,7 +667,7 @@ body {
   margin-inline: auto;
   margin-bottom: 9em;
 }
-.carrousel__container {
+.slider__container {
   width: 300%;
   margin-inline: auto;
   transition: all 0.5s ease;
@@ -676,15 +676,15 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.carrousel__item {
+.slider__item {
   width: 33.3333333333%;
   scroll-snap-align: center;
 }
-.carrousel__image {
+.slider__image {
   border-radius: 0.5em;
   aspect-ratio: 16/9;
 }
-.carrousel__btns {
+.slider__btns {
   padding: 0 0.5em;
   position: absolute;
   width: 100%;
@@ -693,7 +693,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.carrousel__btn {
+.slider__btn {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
@@ -701,10 +701,10 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
-.carrousel__btn:hover {
+.slider__btn:hover {
   transform: scale(1.5);
 }
-.carrousel__points {
+.slider__points {
   position: absolute;
   z-index: 100;
   bottom: 0;
@@ -715,14 +715,14 @@ body {
   justify-content: center;
   gap: 1em;
 }
-.carrousel__point {
+.slider__point {
   height: 1em;
   width: 1em;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.7333333333);
   cursor: pointer;
 }
-.carrousel__point--active {
+.slider__point--active {
   background-color: #ebebeb;
 }
 
