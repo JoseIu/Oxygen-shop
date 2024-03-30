@@ -7,8 +7,6 @@ const emailRegex =
 const validateInput = (formData, e) => {
   const { name, email, conditions } = formData;
 
-  console.log(e.target);
-
   if (e.target.value === '') return showError('camp required', e.target);
 
   if (e.target.name == 'name') {
@@ -24,13 +22,6 @@ const validateInput = (formData, e) => {
     if (!conditions) return showError('', e.target.parentElement);
   }
   removeErrorMessage(e.target);
-
-  // CHECK IF WE HAVE DATA
-  if (!name || !email || !conditions) return;
-
-  console.log(formData);
-
-  // submitForm()
 };
 
 export default validateInput;

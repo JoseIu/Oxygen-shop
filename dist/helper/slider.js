@@ -5,6 +5,7 @@ const points = document.querySelectorAll('.slider__point');
 
 const prev = document.querySelector('#prev');
 const next = document.querySelector('#next');
+
 const slider = () => {
   let position = 0;
   const totalPoints = images.length - 1;

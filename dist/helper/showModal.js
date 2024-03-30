@@ -3,6 +3,7 @@ import progressBarPercent from './progressBarPercent.js';
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalForm = document.querySelector('.modal__form');
+
 const showModal = () => {
   modalClose.addEventListener('click', () => {
     modal.classList.remove('modal--active');
