@@ -10,17 +10,17 @@
   }
   &__description {
     padding: 0 1em;
-    max-width: 19.25rem;
     font-size: 1rem;
     text-align: center;
     text-wrap: pretty;
     margin-inline: auto;
+    font-weight: 400;
 
     margin-bottom: 1.5em;
   }
   &__btn {
     color: #fff;
-    width: 15em;
+    min-width: 15em;
     padding: 1em;
     margin-inline: auto;
     margin-bottom: 3em;
@@ -30,6 +30,9 @@
     transition: all 0.2s ease;
     &:hover {
       transform: scale(1.1);
+    }
+    @media screen and (min-width: 800px) {
+      width: 27.5rem;
     }
   }
   &__img {
