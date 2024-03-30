@@ -52,15 +52,17 @@
   }
   &__cards {
     @media screen and (min-width: 700px) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(13.5em, 1fr));
-      gap: 2em;
+      display: flex;
+      justify-content: center;
+      gap: 9em;
+      // display: grid;
+      // grid-template-columns: repeat(auto-fit, minmax(13.5em, 1fr));
+      // gap: 2em;
     }
   }
 }
 
 .card {
-  width: 100%;
   font-family: 'Raleway';
   @media screen and (max-width: 700px) {
     margin-bottom: 3em;
