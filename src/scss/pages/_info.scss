@@ -6,7 +6,7 @@
     position: relative;
     max-width: 70em;
 
-    padding: 7em 4em;
+    padding: 4em 3em;
     margin-inline: auto;
     margin-bottom: 1.5em;
 
@@ -16,20 +16,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
     }
 
     @media screen and (min-width: 800px) {
-      padding: 1em;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
       gap: 2em;
     }
 
     @media screen and (min-width: 800px) {
-      padding: 2em;
-      height: 370px;
+      // height: 370px;
     }
     &-content {
       order: 2;
@@ -42,13 +40,30 @@
         }
       }
     }
+
     &-titlet {
+      max-width: 26rem;
+
       font-size: clamp(1.875rem, 2vw, 2.25rem);
       margin-bottom: 1em;
     }
     &-description {
-      max-width: 30em;
+      max-width: 26rem;
       font-size: clamp(0.875rem, 1vw, 1rem);
+      @media screen and (min-width: 800px) {
+        padding-bottom: 4em;
+        border-bottom: 0.25em solid;
+      }
+      &--mac {
+        @media screen and (min-width: 800px) {
+          border-color: rgb(251, 59, 100);
+        }
+      }
+      &--iphone {
+        @media screen and (min-width: 800px) {
+          border-color: rgb(8, 166, 228);
+        }
+      }
     }
 
     &-img {
@@ -95,8 +110,8 @@
         position: absolute;
         top: 1em;
         left: 1em;
-        width: 10em;
-        height: 10em;
+        width: 12em;
+        height: 12em;
         border-radius: 50%;
         transform: rotate(50deg);
         background-color: rgba(8, 166, 228, 1);
@@ -105,14 +120,14 @@
         @media screen and (min-width: 500px) {
           width: 15em;
           height: 15em;
-          top: 0.5em;
-          left: 2.2em;
+          top: -0.5em;
+          left: 4em;
         }
         @media screen and (min-width: 800px) {
-          width: 17em;
-          height: 17em;
-          top: 1em;
-          left: 5em;
+          width: 14em;
+          height: 14em;
+          top: -1em;
+          left: 3em;
         }
       }
     }
@@ -126,20 +141,25 @@
     @media screen and (min-width: 800px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      height: 23.125rem;
     }
 
     &-content {
       grid-column: span 2;
-      padding: 4em;
+      padding: 4.3em;
       background-color: rgba(255, 255, 255, 1);
-      border: 0.0625rem solid rgba(232, 233, 237, 1);
     }
     &-titlet {
+      max-width: 26rem;
+
       font-size: clamp(1.875rem, 2vw, 2.25rem);
       margin-bottom: 1em;
     }
     &-description {
+      max-width: 26rem;
+      @media screen and (min-width: 800px) {
+        padding-bottom: 4em;
+        border-bottom: 0.125rem solid rgb(85, 223, 180);
+      }
     }
     &-img {
       order: 2;
