@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch --no-source-map ./src/scss/styles.scss ./dist/css/styles.css",
-    "build": "postcss ./dist/css/styles.css -o ./dist/css/styles.min.css --no-map"
+    "sass": "sass --watch --no-source-map ./src/scss/styles.scss ./docs/css/styles.css",
+    "build": "postcss ./docs/css/styles.css -o ./docs/css/styles.min.css --no-map"
   },
   "keywords": [],
   "author": "",
