@@ -6,38 +6,12 @@ const points = document.querySelectorAll('.slider__point');
 const prev = document.querySelector('#prev');
 const next = document.querySelector('#next');
 
+let position = 0;
+const totalPoints = images.length - 1;
+
 const slider = () => {
-  let position = 0;
-  const totalPoints = images.length - 1;
-
-  next.addEventListener('click', () => {
-    if (position === totalPoints) return;
-    position++;
-
-    let percent = position * -(100 / 3);
-
-    container.style.transform = `translateX(${percent}%)`;
-
-    points.forEach((ecahPoint) => {
-      ecahPoint.classList.remove('slider__point--active');
-    });
-
-    points[position].classList.add('slider__point--active');
-  });
-  prev.addEventListener('click', () => {
-    if (position === 0) return;
-    position--;
-
-    let percent = position * -(100 / 3);
-
-    container.style.transform = `translateX(${percent}%)`;
-
-    points.forEach((ecahPoint) => {
-      ecahPoint.classList.remove('slider__point--active');
-    });
-
-    points[position].classList.add('slider__point--active');
-  });
+  next.addEventListener('click', () => moveSlider('next'));
+  prev.addEventListener('click', () => moveSlider('prev'));
   points.forEach((point, i) => {
     point.addEventListener('click', () => {
       position = i;
@@ -51,6 +25,29 @@ const slider = () => {
       point.classList.add('slider__point--active');
     });
   });
+  setInterval(() => moveSlider('next'), 3000);
+};
+
+const moveSlider = (direction) => {
+  //reset if we are in the end
+  if (direction === 'next' && position === totalPoints) {
+    position = 0;
+  } else if (direction === 'prev' && position === 0) {
+    // reset is we are in the beginning
+    position = totalPoints;
+  } else {
+    position = direction === 'next' ? position + 1 : position - 1;
+  }
+
+  let percent = position * -(100 / 3);
+
+  container.style.transform = `translateX(${percent}%)`;
+
+  points.forEach((eachPoint) => {
+    eachPoint.classList.remove('slider__point--active');
+  });
+
+  points[position].classList.add('slider__point--active');
 };
 
 export default slider;
