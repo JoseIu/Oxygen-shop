@@ -22,10 +22,6 @@ const myFormInputs = myForm.querySelectorAll('.form__input');
 
 const selectPrices = document.querySelector('#select');
 
-selectPrices.addEventListener('change', (e) => {
-  convertPrices(e.target.value);
-});
-
 const formData = {
   name: '',
   email: '',
@@ -77,6 +73,9 @@ window.addEventListener('load', () => {
         behavior: 'smooth',
       });
     }, 200);
+  });
+  selectPrices.addEventListener('change', (e) => {
+    convertPrices(e.target.value);
   });
 
   window.addEventListener('scroll', () => {
