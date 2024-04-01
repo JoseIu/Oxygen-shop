@@ -1,4 +1,4 @@
-# Oxygen shop 🛒 Deml: [![Demo](https://img.shields.io/badge/demo-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://oxygen-shop-jet.vercel.app/)
+# Oxygen shop 🛒 Demo: [![Demo](https://img.shields.io/badge/demo-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://oxygen-shop-jet.vercel.app/)
 
 ## Technologies: HTML, CSS, SASS and JS
 
