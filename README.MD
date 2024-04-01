@@ -1,4 +1,4 @@
-# Oxygen shop 🛒 Demo: [![Demo](https://img.shields.io/badge/demo-000?style=for-the-badge&logo=ko-fi&logoColor=white)](joseiu.github.io/Oxygen-shop/)
+# Oxygen shop 🛒 Demo: [![Demo](https://img.shields.io/badge/demo-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://joseiu.github.io/Oxygen-shop/)
 
 ## Technologies: HTML, CSS, SASS and JS
 
